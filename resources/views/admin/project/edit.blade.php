@@ -18,7 +18,9 @@
                     <select class="form-select form-select-sm" aria-label="Type" id="type_id" name="type_id">
                         @foreach ($types as $type)
 
-                        <option value="{{$type->id}}">{{$type->name}}</option>
+                        <option value="{{$type->id}}"
+                            {{ ($type->id == old("type_id", $project->type_id)) ? "selected" : ""}}>
+                            {{$type->name}}</option>
                         @endforeach
                     </select>
 

@@ -17,7 +17,7 @@
                     {{ __('You are logged in!') }}
                     <div class="row">
                         <div class="col-12">
-                            Benvenuto!!
+                            <h3>Welcome {{ Auth::user()->name }}!</h3>
                         </div>
                     </div>
                 </div>
