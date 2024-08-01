@@ -13,6 +13,14 @@
                     <label for="name">Name</label>
                     <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Project Name" id="name" name="name" value="{{ old('name', $project->name) }}">
 
+                    <label for="type_id">Type</label>
+
+                    <select class="form-select form-select-sm" aria-label="Type" id="type_id" name="type_id">
+                        @foreach ($types as $type)
+
+                        <option value="{{$type->id}}">{{$type->name}}</option>
+                        @endforeach
+                    </select>
 
                     <label for="language_used">Language Used</label>
                     <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Language Used" id="language_used" name="language_used" value="{{ old('language_used', $project->language_used) }}">

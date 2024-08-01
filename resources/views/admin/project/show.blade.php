@@ -9,6 +9,9 @@
                     <h2 class="card-title">
                         {{$project->id}}: {{$project->name}}
                     </h2>
+                    <h3 class="text-center rounded" style="background: {{$project->type->color}}">
+                        {{$project->type->name}}
+                    </h3>
                 </div>
                 <div class="card-body">
                     <h5 class="card-text">

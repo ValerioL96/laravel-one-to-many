@@ -10,6 +10,7 @@
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
+                        <th scope="col">Type</th>
                         <th scope="col">Project Name</th>
                         <th scope="col">Language Used</th>
                         <th scope="col">Url Repository</th>
@@ -21,6 +22,9 @@
 
                     <tr>
                         <th>{{ $project->id}}</th>
+                        <th>
+                            {{$project->type->name}}
+                        </th>
                         <td>{{ $project->name}}</td>
                         <td>{{ $project->language_used}}</td>
                         <td>
